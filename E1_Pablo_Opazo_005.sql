@@ -30,11 +30,11 @@ WHERE vunitario BETWEEN 20000 AND 30000;
 SELECT
     CASE
         WHEN credito BETWEEN 0 AND 1000000 THEN
-            'Estimado(a) ' || INITCAP(nombre) || ' usted como cliente PLATA lo citamos a una celebración el día ' || TO_DATE('24/9/2022','DD-MM-YY')
+            'Estimado(a) ' || INITCAP(nombre) || ' usted como cliente PLATA lo citamos a una celebración el día 24/09/22'
         WHEN credito BETWEEN 1000001 AND 2000000 THEN
-            'Estimado(a) ' || INITCAP(nombre) || ' usted como cliente ORO lo citamos a una celebración el día ' || TO_DATE('25/9/2022','DD-MM-YY')
+            'Estimado(a) ' || INITCAP(nombre) || ' usted como cliente ORO lo citamos a una celebración el día 25/09/22'
     ELSE
-        'Estimado(a) ' || INITCAP(nombre) || ' usted como cliente DIAMANTE lo citamos a una celebración el día ' || TO_DATE('26/9/2022','DD-MM-YY')
+        'Estimado(a) ' || INITCAP(nombre) || ' usted como cliente DIAMANTE lo citamos a una celebración el día 26/09/22'
     END AS "INVITACIÓN"  
 FROM cliente
 ORDER BY credito DESC, nombre ASC;
